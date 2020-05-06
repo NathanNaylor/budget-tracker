@@ -68,4 +68,4 @@ function saveRecord(record) {
 }
 
 // listen for connection to online
-window.addEventListener("online", checkDatabase);
+window.addEventListener("online", checkDB);
