@@ -1,5 +1,3 @@
-/* global saveRecord, Chart */
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/service-worker.js")
@@ -31,7 +29,6 @@ function createTransactionForm() {
 
   const showError = (message) => {
     errorEl.textContent = message;
-    
   };
 
   // return false if invalid and display validation message
