@@ -8,16 +8,11 @@
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
+    "/index.js",
     "/styles.css",
-    "/assets/js/loadPosts.js",
-    "/assets/images/Angular-icon.png",
-    "/assets/images/React-icon.png",
-    "/assets/images/Vue.js-icon.png",
-    "/manifest.webmanifest",
+    "/db.js",
     "/icons/icon-192x192.png",
     "/icons/icon-512x512.png",
-    "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css",
-    "https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   ];
   
   const CACHE_NAME = "static-cache-v1";
@@ -55,7 +50,7 @@ const FILES_TO_CACHE = [
   // fetch
   self.addEventListener("fetch", (evt) => {
     // cache successful requests to the API
-    if (evt.request.url.includes("/api/")) {
+    if (evt.request.url.includes("/api/") && evt.request.method === "GET") {
       evt.respondWith(
         caches
           .open(DATA_CACHE_NAME)
@@ -64,7 +59,7 @@ const FILES_TO_CACHE = [
               .then((response) => {
                 // If the response was good, clone it and store it in the cache.
                 if (response.status === 200) {
-                  cache.put(evt.request.url, response.clone());
+                  cache.put(evt.request, response.clone());
                 }
   
                 return response;
