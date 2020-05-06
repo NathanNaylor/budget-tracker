@@ -8,27 +8,19 @@
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
-    "/assets/css/style.css",
+    "/styles.css",
     "/assets/js/loadPosts.js",
     "/assets/images/Angular-icon.png",
     "/assets/images/React-icon.png",
     "/assets/images/Vue.js-icon.png",
     "/manifest.webmanifest",
-    "/favicon.ico",
     "/icons/icon-192x192.png",
     "/icons/icon-512x512.png",
-    "/assets/images/icons/icon-96x96.png",
-    "/assets/images/icons/icon-128x128.png",
-    "/assets/images/icons/icon-144x144.png",
-    "/assets/images/icons/icon-152x152.png",
-    "/assets/images/icons/icon-192x192.png",
-    "/assets/images/icons/icon-384x384.png",
-    "/assets/images/icons/icon-512x512.png",
     "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css",
     "https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   ];
   
-  const CACHE_NAME = "static-cache-v2";
+  const CACHE_NAME = "static-cache-v1";
   const DATA_CACHE_NAME = "data-cache-v1";
   
   // install
